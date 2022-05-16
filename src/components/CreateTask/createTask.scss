@@ -1,0 +1,15 @@
+@import '../../assets/styles/variables/index.scss';
+
+.create-task{
+    width: 100%;
+    padding: 20px;
+    border: none;
+    border-top: 8px solid $brown;
+    background-color: $bg_gray;
+    outline: none;
+
+    &::placeholder{
+        font-style: italic;
+        font-weight: 500;
+    }
+}

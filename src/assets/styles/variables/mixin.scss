@@ -1,0 +1,13 @@
+@mixin flex-ac {
+    
+}
+
+@mixin hiddenItem {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@mixin showItem {
+    opacity: 1;
+    visibility: visible;
+}

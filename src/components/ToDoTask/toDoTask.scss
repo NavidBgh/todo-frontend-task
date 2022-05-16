@@ -1,0 +1,58 @@
+@import "../../assets/styles/index.scss";
+
+.todo-list {
+}
+
+.todo-row {
+  display: flex;
+  align-items: center;
+  border-top: 1px dashed #cecece;
+
+  &__check {
+    margin-right: 6px;
+  }
+
+  &__input {
+    padding: 12px 4px;
+    width: 100%;
+    margin-right: 4px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    cursor: pointer;
+
+    &:read-only {
+      user-select: none !important;
+      -moz-user-select: none !important;
+      -khtml-user-select: none !important;
+      -webkit-user-select: none !important;
+      -o-user-select: none !important;
+    }
+
+    &.active {
+      cursor: text;
+    }
+  }
+
+  &__delete {
+    @include hiddenItem;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    height: 24px;
+    cursor: pointer;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: rgb(255, 228, 228);
+    }
+  }
+
+  &:hover {
+    .todo-row__delete {
+      @include showItem;
+    }
+  }
+}
