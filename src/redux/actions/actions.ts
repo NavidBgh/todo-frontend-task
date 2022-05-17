@@ -1,5 +1,5 @@
 import { todoTask } from "../../utils/data/types";
-import { ADD_TODO, TOGGLE_TODO, SET_FILTER, DELETE_TODO, CLEAR_TODO, FETCH_TODO } from "./types";
+import { ADD_TODO, TOGGLE_TODO, SET_FILTER, DELETE_TODO, CLEAR_TODO, FETCH_TODO, UPDATE_TODO } from "./types";
 
 export const addTodo = (title: string) => ({
     type: ADD_TODO,
@@ -22,6 +22,11 @@ export const clearTodo = () => ({
 export const toggleTodo = (id: number) => ({
     type: TOGGLE_TODO,
     payload: { id }
+});
+
+export const updateTodo = (id: number, title: string) => ({
+    type: UPDATE_TODO,
+    payload: { id, title }
 });
 
 export const fetchTodo = (todos: todoTask[]) => ({
