@@ -1,4 +1,4 @@
-const SVG = ({ icon = "" }) => {
+export const SVG = ({ icon = "" }) => {
   switch (icon) {
     case "close":
       return (
@@ -19,5 +19,3 @@ const SVG = ({ icon = "" }) => {
       return null;
   }
 };
-
-export default SVG;

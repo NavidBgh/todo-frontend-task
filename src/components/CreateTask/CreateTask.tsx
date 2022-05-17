@@ -1,11 +1,12 @@
 import { useRef } from "react";
 import toast from "react-hot-toast";
-import { connect } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addTodo } from "../../redux";
 import "./createTask.scss";
 
-const CreateTask = () => {
+export const CreateTask = () => {
   const inputRef: any = useRef();
+  const dispatch = useDispatch();
 
   const handleSubmitTask = (e: any) => {
     e.preventDefault();
@@ -13,7 +14,7 @@ const CreateTask = () => {
     if (inputRef.current.value.length === 0) {
       toast.error("Fill the input");
     } else {
-      addTodo(inputRef.current.value);
+      dispatch(addTodo(inputRef.current.value));
       inputRef.current.value = "";
       toast.success("Task added!");
     }
@@ -30,5 +31,3 @@ const CreateTask = () => {
     </form>
   );
 };
-
-export default connect(null, { addTodo })(CreateTask);

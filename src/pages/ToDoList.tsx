@@ -1,19 +1,6 @@
-import { useEffect } from "react";
-import { Container, Footer, Header, ToDoTask } from "../components";
-import CreateTask from "../components/CreateTask/CreateTask";
-import { getTodosAPI } from "../utils/services/todos";
+import { Container, CreateTask, Footer, Header, ToDoTask } from "../components";
 
 const ToDoList = () => {
-  
-  useEffect(() => {
-    const getTodos = async () => {
-      const apiResponse = getTodosAPI()
-      console.log(await apiResponse);
-    }
-
-    getTodos()
-  }, []);
-
   return (
     <Container>
       <Header />

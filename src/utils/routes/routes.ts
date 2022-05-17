@@ -1,11 +1,5 @@
 import ToDoList from "../../pages/ToDoList"
-
-interface route{
-    path: string,
-    component: any,
-    private: boolean,
-    exact: boolean
-}
+import { route } from "../data/types"
 
 export const routes : route[] = [
     {

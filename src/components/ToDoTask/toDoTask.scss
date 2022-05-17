@@ -1,8 +1,5 @@
 @import "../../assets/styles/index.scss";
 
-.todo-list {
-}
-
 .todo-row {
   display: flex;
   align-items: center;
@@ -31,6 +28,8 @@
 
     &.active {
       cursor: text;
+      color: $brown;
+      font-weight: 500;
     }
   }
 

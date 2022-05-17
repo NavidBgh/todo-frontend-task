@@ -5,7 +5,7 @@ import { Toaster } from "react-hot-toast";
 const App = () => {
   return (
     <>
-      <Toaster />
+      <Toaster toastOptions={{ duration: 1500 }} />
       <Router>
         <Switch>
           {routes.map((route: any, index: number) => (

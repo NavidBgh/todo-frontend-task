@@ -1,6 +1,6 @@
 import axios from "axios";
 
-axios.defaults.baseURL = `http://localhost:8000/tasks`;
+axios.defaults.baseURL = `http://localhost:8000`;
 
 axios.interceptors.request.use((config: any) => {
   const token = localStorage.getItem('user_token'); // user token example
