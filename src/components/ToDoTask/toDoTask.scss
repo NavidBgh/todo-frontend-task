@@ -1,5 +1,9 @@
 @import "../../assets/styles/index.scss";
 
+.todo-list {
+  height: calc(100vh - 195px);
+}
+
 .todo-row {
   display: flex;
   align-items: center;

@@ -9,47 +9,51 @@ export const todos = (state: any = initialState, action: any) => {
   switch (action.type) {
     case ADD_TODO: {
       const { title } = action.payload;
-      const result = cloneDeep(state);
-      const res: any = addTodoAPI({
+      const currState = cloneDeep(state);
+      addTodoAPI({
         title: title,
         status: 'todo'
-      })
-        .then(res => res.id);
-      result.push({
+      });
+      currState.push({
         title: title,
         status: 'todo',
-        id: res.id
+        id: state.length === 0 ? 1 : state[state.length - 1].id + 1
       });
-      return result;
+      return currState;
     }
 
     case DELETE_TODO: {
       const { id } = action.payload;
-      const result = cloneDeep(state);
+      const currState = cloneDeep(state);
       deleteTodoAPI(id);
-      remove(result, (obj: todoTask) => obj.id === id);
-      return result;
+      remove(currState, (obj: todoTask) => obj.id === id);
+      return currState;
     }
 
     case CLEAR_TODO: {
-      const result = cloneDeep(state);
-      remove(result, (obj: todoTask) => obj.status === 'done');
-      return result;
+      const currState = cloneDeep(state);
+      remove(currState, (obj: todoTask) => {
+        if (obj.status === 'done') {
+          deleteTodoAPI(obj.id);
+          return obj;
+        }
+      });
+      return currState;
     }
 
     case TOGGLE_TODO: {
       const { id } = action.payload;
-      const result = cloneDeep(state);
+      const currState = cloneDeep(state);
       let status = '';
-      let index = findIndex(result, (todo: todoTask) => todo.id === id)
-      if (result[index].status === 'todo') {
+      let index = findIndex(currState, (todo: todoTask) => todo.id === id)
+      if (currState[index].status === 'todo') {
         status = 'done';
       } else {
         status = 'todo';
       }
-      result[index].status = status;
-      updateTodoAPI(result[index]);
-      return result;
+      currState[index].status = status;
+      updateTodoAPI(currState[index]);
+      return currState;
     }
 
     case FETCH_TODO: {
