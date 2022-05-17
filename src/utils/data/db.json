@@ -1,84 +1,84 @@
 {
   "tasks": [
     {
-      "title": "test",
+      "title": "Sample task 1.",
       "status": "todo",
       "id": 1
     },
     {
-      "title": "asdf",
+      "title": "SnappShop task!",
+      "status": "done",
+      "id": 2
+    },
+    {
+      "title": "task 3",
       "status": "todo",
       "id": 3
     },
     {
-      "title": "asdf",
+      "title": "task 4",
       "status": "todo",
       "id": 4
     },
     {
-      "title": "asd",
+      "title": "task 5",
       "status": "todo",
       "id": 5
     },
     {
-      "title": "fas",
+      "title": "task 6",
       "status": "todo",
       "id": 6
     },
     {
-      "title": "df",
+      "title": "task 7",
       "status": "todo",
       "id": 7
     },
     {
-      "title": "asd",
+      "title": "task 8",
       "status": "todo",
       "id": 8
     },
     {
-      "title": "f",
+      "title": "task 9",
       "status": "todo",
       "id": 9
     },
     {
-      "title": "as",
+      "title": "task 10",
       "status": "todo",
       "id": 10
     },
     {
-      "title": "dsfh",
-      "status": "todo",
+      "title": "task 11",
+      "status": "done",
+      "id": 11
+    },
+    {
+      "title": "task 12",
+      "status": "done",
       "id": 12
     },
     {
-      "title": "d",
-      "status": "todo",
+      "title": "task 13",
+      "status": "done",
       "id": 13
     },
     {
-      "title": "ghj",
-      "status": "todo",
+      "title": "task 14",
+      "status": "done",
+      "id": 14
+    },
+    {
+      "title": "task 15",
+      "status": "done",
       "id": 15
     },
     {
-      "title": "k",
+      "title": "task 16",
       "status": "todo",
       "id": 16
-    },
-    {
-      "title": "hgf",
-      "status": "todo",
-      "id": 17
-    },
-    {
-      "title": "g",
-      "status": "todo",
-      "id": 19
-    },
-    {
-      "title": "s",
-      "status": "todo",
-      "id": 20
     }
   ]
 }
